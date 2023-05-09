@@ -63,11 +63,21 @@ nav {
 
     font-size: 1.25rem;
     background-color: var(--navbar-color);
+    color: var(--light-color);
     border: var(--primary-color) 0.2rem solid;
+}
+#search_input::placeholder {
+    color: var(--primary-color);
+    opacity: 1;
 }
 #search_input:active,
 #search_input:focus {
     background-color: var(--primary-color);
+}
+#search_input:active::placeholder,
+#search_input:focus::placeholder {
+    color: var(--navbar-color);
+    opacity: 0.9;
 }
 
 
