@@ -48,11 +48,19 @@ header {
 nav {
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: center;
+    position: relative;
 
     height: 4rem;
     background-color: var(--navbar-color);
     padding: 0 2rem;
+}
+.search {
+    position: absolute;
+    right: 2rem;
+    transform: translateX(0%);
+    transition: all .5s ease-in-out;
+    width: max-content;
 }
 
 #search_input {
@@ -64,18 +72,19 @@ nav {
     font-size: 1.25rem;
     background-color: var(--navbar-color);
     color: var(--light-color);
-    border: var(--primary-color) 0.2rem solid;
+    border: 0.2rem solid var(--primary-color);
+}
+#search_input:is(:hover, :active, :focus) {
+    background-color: var(--primary-color);
+}
+#search_input:focus {
+    border-color: var(--secondary-color);
 }
 #search_input::placeholder {
     color: var(--primary-color);
     opacity: 1;
 }
-#search_input:active,
-#search_input:focus {
-    background-color: var(--primary-color);
-}
-#search_input:active::placeholder,
-#search_input:focus::placeholder {
+#search_input:is(:hover, :active, :focus)::placeholder{
     color: var(--navbar-color);
     opacity: 0.9;
 }
@@ -98,12 +107,28 @@ nav {
     border-radius: var(--border-radius);
     overflow: hidden;
     position: relative;
-    transition: scale 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.6);
 }
-.movie:hover .movie-back {
+.movie:is(:hover) .movie-back,
+.movie:has(a:focus) .movie-back {
     transform: translateY(-100%);
 }
-.movie:hover {
+.movie:is(:hover),
+.movie:has(a:focus) {
+    scale: 1.03;
+    box-shadow: 20px 20px 15px 0px rgba(0, 0, 0, 0.6);
+    background-color: red;
+}
+.movie a{
+    text-decoration: none;
+}
+.movie img{
+    transition: all 0.5s ease-in-out;
+    transform-origin: bottom ;
+}
+.movie:is(:hover) img,
+.movie:has(a:focus) img {
     scale: 1.03;
 }
 
@@ -154,32 +179,60 @@ nav {
     margin-top: 2rem;
     margin-bottom: 1.5rem;
     font-size: 1.25rem;
+    color: var(--dark-color);
 }
 .movie-back p{
     line-height: 1.5rem;
+    color: var(--dark-color);
 }
 
 
-@media only screen and (max-width: calc(340px * 5)) {
+@media only screen and (max-width: calc(350px * 5)) {
     #movies {
-        max-width: calc(300px * 4 + 40px * 3);
+        max-width: calc(340px * 4 - 40px);
     }
 }
 
-@media only screen and (max-width: calc(340px * 4)) {
+@media only screen and (max-width: calc(350px * 4)) {
     #movies {
-        max-width: calc(300px * 3 + 40px * 2);
+        max-width: calc(340px * 3 - 40px);
     }
 }
-
-@media only screen and (max-width: calc(340px * 3)) {
+@media only screen and (max-width: calc(350px * 3)) {
     #movies {
-        max-width: calc(300px * 2 + 40px * 1);
+        max-width: calc(340px * 2 - 40px);
     }
 }
-
-@media only screen and (max-width: calc(340px * 2)) {
+@media only screen and (max-width: calc(350px * 2)) {
     #movies {
-        max-width: calc(300px * 1 + 40px * 0);
+        max-width: 340px;
+        justify-content: center;
+    }
+    .search {
+        right: 50%;
+        transform: translateX(50%);
+    }
+    #search_input {
+        width: calc(100% - 2.4rem);
+    }
+}
+@media only screen and (max-width: calc(400px)) {
+    .search {
+        transition: all 0s ease-in-out;
+    }
+}
+@media only screen and (max-width: calc(360px)) {
+    .search {
+        position: relative;
+        transform: translateX(0%);
+        right: 0%;
+    }
+    .movie-front {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .movie-front h3{
+        height: fit-content;
+        text-align: center;
     }
 }
