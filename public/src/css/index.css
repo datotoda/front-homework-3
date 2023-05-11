@@ -118,7 +118,6 @@ nav {
 .movie:has(a:focus) {
     scale: 1.03;
     box-shadow: 20px 20px 15px 0px rgba(0, 0, 0, 0.6);
-    background-color: red;
 }
 .movie a{
     text-decoration: none;
