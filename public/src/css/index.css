@@ -1,95 +1,3 @@
-:root {
-    --primary-color: #146C94;
-    --secondary-color: #B0DAFF;
-    --navbar-color: #19A7CE;
-    --light-color: #FFFFFF;
-    --dark-color: #000000;
-    --low-color: #FF7500;
-    --norm-color: #DCDC5A;
-    --high-color: #00E900;
-
-    --card-max-width: 300px;
-    --border-radius: 5px;
-    --movies-gap: 40px;
-}
-
-* {
-    margin: 0;
-}
-
-img {
-    width: 100%;
-}
-
-body {
-    background-color: var(--primary-color);
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: 0.5px;
-    position: relative;
-}
-
-.t-c-low {
-    color: var(--low-color);
-}
-.t-c-norm {
-    color: var(--norm-color);
-}
-.t-c-high {
-    color: var(--high-color);
-}
-
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-
-    height: 4rem;
-    background-color: var(--navbar-color);
-    padding: 0 2rem;
-}
-.search {
-    position: absolute;
-    right: 2rem;
-    transform: translateX(0%);
-    transition: all .5s ease-in-out;
-    width: max-content;
-}
-
-#search_input {
-    height: 1.75rem;
-    border-radius: 2rem;
-    padding: 0.25rem 1rem;
-    outline: none;
-
-    font-size: 1.25rem;
-    background-color: var(--navbar-color);
-    color: var(--light-color);
-    border: 0.2rem solid var(--primary-color);
-}
-#search_input:is(:hover, :active, :focus) {
-    background-color: var(--primary-color);
-}
-#search_input:focus {
-    border-color: var(--secondary-color);
-}
-#search_input::placeholder {
-    color: var(--primary-color);
-    opacity: 1;
-}
-#search_input:is(:hover, :active, :focus)::placeholder{
-    color: var(--navbar-color);
-    opacity: 0.9;
-}
-
-
 
 #movies {
     max-width: calc(var(--card-max-width) * 5 + var(--movies-gap) * 4);
@@ -109,25 +17,20 @@ nav {
     position: relative;
     transition: all 0.5s ease-in-out;
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
 }
-.movie:is(:hover) .movie-back,
-.movie:has(a:focus) .movie-back {
+.movie:is(:hover) .movie-back {
     transform: translateY(-100%);
 }
-.movie:is(:hover),
-.movie:has(a:focus) {
+.movie:is(:hover) {
     scale: 1.03;
     box-shadow: 20px 20px 15px 0px rgba(0, 0, 0, 0.6);
-}
-.movie a{
-    text-decoration: none;
 }
 .movie img{
     transition: all 0.5s ease-in-out;
     transform-origin: bottom ;
 }
-.movie:is(:hover) img,
-.movie:has(a:focus) img {
+.movie:is(:hover) img {
     scale: 1.03;
 }
 
@@ -143,13 +46,6 @@ nav {
     font-size: 1.25rem;
     color: var(--dark-color);
     height: 6rem;
-}
-.movie-front span {
-    background-color: var(--primary-color);
-    border-radius: var(--border-radius);
-    padding: calc(var(--border-radius) * 2);
-
-    font-weight: bold;
 }
 
 
@@ -207,25 +103,9 @@ nav {
         max-width: 340px;
         justify-content: center;
     }
-    .search {
-        right: 50%;
-        transform: translateX(50%);
-    }
-    #search_input {
-        width: calc(100% - 2.4rem);
-    }
 }
-@media only screen and (max-width: calc(400px)) {
-    .search {
-        transition: all 0s ease-in-out;
-    }
-}
+
 @media only screen and (max-width: calc(360px)) {
-    .search {
-        position: relative;
-        transform: translateX(0%);
-        right: 0%;
-    }
     .movie-front {
         flex-direction: column;
         gap: 2rem;
