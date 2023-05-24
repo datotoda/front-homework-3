@@ -187,29 +187,29 @@
 	align-items: center;
 	justify-content: center;
 	font-size: 14px;
-	color: #68a9f8;
+	color: var(--standard-color);
 	width: 25px;
 	height: 25px;
 	border-radius: 50%;
-	background: #68a9f8;
+	background: var(--standard-color);
 }
 
 .vip-seat {
-	background: #85cf68;
-	color: #85cf68;
+	background: var(--vip-color);
+	color: var(--vip-color);
 }
 
 .seat:not(.desabled-seat):hover,
 .vip-seat:not(.desabled-seat):hover {
 	color: #fff;
-	outline: 3px solid #68a9f8;
+	outline: 3px solid var(--standard-color);
 	outline-offset: -1px;
 	-moz-outline-radius: 100%;
 	scale: 1.2;
 }
 
 .vip-seat:not(.desabled-seat):hover {
-	outline: 3px solid #85cf68;
+	outline: 3px solid var(--vip-color);
 }
 
 .desabled-seat {
@@ -228,16 +228,16 @@
 }
 
 .seat-selected:not(.desabled-seat):hover {
-	outline: 6px solid #68a9f8;
+	outline: 6px solid var(--standard-color);
 	outline-offset: -1px;
 }
 
 .seat-selected:is(.vip-seat) {
-	outline: 2px solid #85cf68;
+	outline: 2px solid var(--vip-color);
 }
 
 .seat-selected:is(.vip-seat):hover {
-	outline: 6px solid #85cf68;
+	outline: 6px solid var(--vip-color);
 }
 
 
@@ -261,18 +261,18 @@
 }
 
 .standard__circle {
-	background: #68a9f8;
+	background: var(--standard-color);
 }
 
 .vip__circle {
-	background: #85cf68;
+	background: var(--vip-color);
 }
 
 .square-btn {
 	cursor: pointer;
 	padding: 10px 40px;
 	color: #fff;
-	background: #68a9f8;
+	background: var(--standard-color);
 	border: none;
 	border-radius: 5px;
 	text-transform: uppercase;
@@ -281,32 +281,10 @@
 }
 
 .square-btn:hover {
-	background: #85cf68;
+	background: var(--vip-color);
 	letter-spacing: 1px;
 	font-weight: 700;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 #related_movies h2 {

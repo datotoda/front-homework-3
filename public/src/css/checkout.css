@@ -1,0 +1,269 @@
+
+#container {
+    margin-top: 4rem;
+    display: flex;
+    gap: 5rem;
+    padding: 4rem 6rem;
+}
+#container > * {
+    border-radius: var(--border-radius);
+    height: fit-content;
+    background-color: var(--secondary-color);
+    flex: 1;
+    box-sizing: border-box;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#container .personal_information {
+    flex: 2;
+}
+
+.personal_information .subtitle {
+    font-size: 1.75rem;
+    position: relative;
+    margin-block: 0.5rem 1rem;
+}
+
+.personal_information .subtitle::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: -0.5rem;
+    height: 0.1rem;
+    background-color: var(--primary-color);
+}
+
+.personal_information #input_name,
+.personal_information #input_card_detail {
+    display: flex;
+    gap: 1.5rem;
+}
+.personal_information #input_name .input:first-child {
+    flex: 1;
+}
+.personal_information #input_name .input:last-child {
+    flex: 2;
+}
+
+.personal_information .input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    position: relative;
+}
+.personal_information .input::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: -0.1rem;
+    height: 0.1rem;
+    background-color: var(--navbar-color); 
+}
+
+.personal_information .input label {
+    font-size: 1.25rem;
+    opacity: 0.8;
+}
+.personal_information .input input {
+    font-size: 1.35rem;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    
+}
+
+.personal_information .input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+
+.gpay-button {
+    background-image: url(https://www.gstatic.com/instantbuy/svg/light/checkout/en.svg);
+    height: 40px;
+    min-height: 40px;
+    max-width: 240px;
+    width: 100%;
+    padding: 9px 24px;
+    background-color: #ffffff;
+    background-origin: content-box;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 0px;
+    border-radius: 4px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 1px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.gpay-button:hover {
+    background-color: #f8f8f8;
+}
+.gpay-button:active {
+    box-shadow: #e8e8e8 0 1px 1px 0, #e8e8e8 0 1px 3px;
+}
+
+
+.ticket_checkout {
+    position: relative;
+}
+
+.ticket_checkout #movie_info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+.ticket_checkout #movie_info .title {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+
+.ticket_checkout #tickets {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.ticket_checkout #tickets .ticket {
+    display: flex;
+}
+
+.ticket_checkout #tickets .color {
+    width: 1.5rem;
+    position: relative;
+    background-color: var(--standard-color);
+}
+.ticket_checkout #tickets .vip {
+    background-color: var(--vip-color);
+}
+
+.ticket_checkout #tickets .color::before {
+    content: "";
+    position: absolute;
+    background-color: var(--dark-color);
+    border-right: 0.2rem dotted var(--secondary-color);
+    background-color: transparent;
+    right: -0.1rem;
+    top: 0;
+    bottom: 0;
+}
+
+
+.ticket_checkout #tickets .data {
+    position: relative;
+    background-color: var(--primary-color);
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.ticket_checkout #tickets .data::before,
+.ticket_checkout #tickets .data::after {
+    content: "";
+    position: absolute;
+    background-color: var(--secondary-color);
+    width: 1rem;
+    height: 1rem;
+    border-radius: 1rem;
+    left: -0.5rem;
+    top: -0.5rem;
+}
+
+.ticket_checkout #tickets .data::after {
+    top: auto;
+    bottom: -0.5rem;
+}
+
+.ticket_checkout #tickets .data div{
+    color: var(--light-color);
+}
+.ticket_checkout #tickets .data .info{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+
+.ticket_checkout #checkout {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    padding-block: 1rem;
+    border-block: .1rem solid var(--primary-color);
+}
+
+.ticket_checkout #checkout .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.ticket_checkout .price::after {
+    content: " ₾";
+}
+
+
+
+.ticket_checkout #buy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.ticket_checkout #total_cost {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.ticket_checkout #buy_btn {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    font-size: 1.5rem;
+    border-radius: var(--border-radius);
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 1px 0px, rgba(60, 64, 67, 0.5) 0px 1px 3px 1px;
+
+}
+.ticket_checkout #buy_btn:hover {
+    background-color: #135F82;
+}
+.ticket_checkout #buy_btn:active {
+    box-shadow: #e8e8e8 0 1px 1px 0, #e8e8e8 0 1px 3px;
+
+}
+
+
+@media only screen and (max-width: 1300px) {
+    #container {
+        padding: 4rem 3rem;
+        gap: 4rem;
+    }
+    #container .personal_information  {
+        flex: 1;
+    }
+    .personal_information #input_name,
+    .personal_information #input_card_detail {
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 900px) {
+    #container {
+        padding: 4rem 2rem;
+        gap: 2rem;
+        flex-direction: column;
+    }
+}

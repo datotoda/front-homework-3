@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaxetinet</title>
+    <link rel="shortcut icon" href="src/images/favicon.ico">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/checkout.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="navbar_logo">
+                <img src="src/images/kaxetinet_logo.png"/>
+                <span>Kaxetinet</span>
+            </div>
+            <div class="search">
+                <form id="search_form">
+                    <input type="text" name="q" id="search_input" onsubmit="search" placeholder="Search">
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <section id="container">
+        <div class="personal_information">
+            <div class="subtitle"> 
+                Perosnal Information
+            </div>
+            <div id="input_name"> 
+                <div class="input">
+                    <label for="input_first_name">First name:</label>
+                    <input type="text" id="input_first_name" name="first_name" required>
+                </div>
+                <div class="input">
+                    <label for="input_last_name">Last name:</label>
+                    <input type="text" id="input_last_name" name="last_name" required>
+                </div>
+            </div>
+            <div class="input">
+                <label for="input_email">Email:</label>
+                <input type="email" id="input_email" name="email" required>
+            </div>
+            <div class="input">
+                <label for="input_phone_number">Phone number:</label>
+                <input type="number" id="input_phone_number" name="phone_number" required>
+            </div>
+            <div class="subtitle"> 
+                Payment
+            </div>
+            <div class="input">
+                <label for="input_card_number">Card number:</label>
+                <input type="number" id="input_card_number" name="card_number" required>
+            </div>
+            <div id="input_card_detail"> 
+                <div class="input">
+                    <label for="input_expire_date">Expire date:</label>
+                    <input type="text" id="input_expire_date" name="expire_date" required>
+                </div>
+                <div class="input">
+                    <label for="input_cvv">CVV2:</label>
+                    <input type="number" id="input_cvv" name="cvv" required>
+                </div>
+            </div>
+            <div class="subtitle"> 
+                Or
+            </div>
+            <div class="gpay">
+                <button type="button" aria-label="Checkout with GPay" class="gpay-button"></button>
+            </div>
+        </div>
+        <div class="ticket_checkout">
+            <div id="movie_info">
+                <div class="title">Mario</div>
+                <div class="subtitle">Amirani 19:40</div>
+            </div>
+            <div id="tickets"></div>
+            <div id="checkout">
+                <div class="row">
+                    <div class="label">Tickets</div>
+                    <div class="price" id="tikets_price">0</div>
+                </div>
+                <div class="row">
+                    <div class="label">Service Fee</div>
+                    <div class="price" id="service_price">0</div>
+                </div>
+                
+            </div>
+            <div id="buy">
+                <div id="total_cost">
+                    <div>
+                        Total: <span class="price">0</span>
+                    </div>
+                </div>
+                <div id="buy_btn">
+                    Buy
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="src/js/script.js"></script>
+    <script src="src/js/checkout.js"></script>
+</body>
+</html>
