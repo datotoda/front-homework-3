@@ -61,37 +61,30 @@ header {
 nav {
     display: flex;
     align-items: center;
-    justify-content: center;
-    position: relative;
+    justify-content: space-between;
 
     height: 4rem;
     background-color: var(--navbar-color);
     padding: 0 2rem;
+    gap: 1rem
 }
 #navbar_logo {
-    position: absolute;
-    left: 2rem;
     display: flex;
     align-items: center;
     gap: 1rem;
     font-size: 2rem;
     color: var(--light-color);
     cursor: pointer;
+    min-width: fit-content;
 }
 #navbar_logo span {
     transition: opacity .2s ease;
-}
-.search {
-    position: absolute;
-    right: 2rem;
-    transform: translateX(0%);
-    transition: all .5s ease-in-out;
-    width: max-content;
 }
 
 #search_input {
     height: 1.75rem;
     border-radius: 2rem;
+    width: 85%;
     padding: 0.25rem 1rem;
     outline: none;
 
@@ -124,33 +117,13 @@ nav {
 }
 
 
-@media only screen and (max-width: calc(350px * 2)) {
+@media only screen and (max-width: calc(900px)) {
     #navbar_logo span {
         opacity: 0;
     }
-    .search {
-        right: 50%;
-        transform: translateX(50%);
-    }
-    #search_input {
-        width: calc(100% - 2.4rem);
-    }
 }
-@media only screen and (max-width: calc(400px)) {
+@media only screen and (max-width: calc(800px)) {
     #navbar_logo span {
         display: none;
-    }
-    .search {
-        transition: all 0s ease-in-out;
-    }
-}
-@media only screen and (max-width: calc(360px)) {
-    #navbar_logo {
-        display: none;
-    }
-    .search {
-        position: relative;
-        transform: translateX(0%);
-        right: 0%;
     }
 }
