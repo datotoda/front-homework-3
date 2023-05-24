@@ -58,6 +58,12 @@
     margin-bottom: 1rem;
 }
 
+#movie #movie_information .year {
+    /* font-size: 1.15rem; */
+    /* font-weight: bold; */
+    margin-right: 1rem;
+}
+
 #movie #movie_information .rate {
     background-color: var(--navbar-color);
 }
@@ -71,6 +77,234 @@
     font-size: 1rem;
     line-height: 1.5rem;
 }
+
+
+
+#seats {
+    overflow-x: auto;
+    
+}
+
+.main-container {
+	background: #25262c;
+	color: #7c7d80;
+	width: 800px;
+	max-height: 590px;
+	padding: 20px;
+	margin: auto;
+	border-radius: 5px;
+}
+
+.head,
+.footer {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.head {
+	border-bottom: 1px solid #7c7d80;
+}
+
+.footer {
+	border-top: 1px solid #7c7d80;
+}
+
+.movie-info,
+.title-info,
+.seat-info,
+.total-cost-info{
+	display: flex;
+	align-items: center;
+}
+
+.total-cost-info{
+    gap: 0.5rem;
+}
+
+.title {
+	color: #fff;
+	margin-right: 20px;
+	margin-bottom: 5px;
+}
+
+.title-info h6 {
+	color: #fff;
+	background: #7c7d80;
+	text-transform: uppercase;
+	font-size: 10px;
+	padding: 3px;
+	margin-right: 7px;
+	border-radius: 2px;
+}
+
+.cinema-id {
+	font-weight: 300;
+	margin-bottom: 15px;
+}
+
+.movie-date {
+	color: #fff;
+	margin-bottom: 25px;
+	font-weight: 400;
+}
+
+
+.seat-selection-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 20px;
+	perspective: 1000px;
+}
+
+.screen {
+	background: url("https://i.ibb.co/gV1d3F8/screen.jpg") no-repeat center/cover;
+	width: 85%;
+	height: 120px;
+	margin: auto;
+	transform: rotateX(-45deg);
+	box-shadow: 0px 32px 40px -20px rgba(255, 255, 255, 0.5);
+}
+
+.seats-container {
+	transform: rotateX(45deg);
+}
+
+.row {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.row:not(:last-child) {
+	margin-bottom: 25px;
+}
+
+.seat {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 14px;
+	color: #68a9f8;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: #68a9f8;
+}
+
+.vip-seat {
+	background: #85cf68;
+	color: #85cf68;
+}
+
+.seat:not(.desabled-seat):hover,
+.vip-seat:not(.desabled-seat):hover {
+	color: #fff;
+	outline: 3px solid #68a9f8;
+	outline-offset: -1px;
+	-moz-outline-radius: 100%;
+	scale: 1.2;
+}
+
+.vip-seat:not(.desabled-seat):hover {
+	outline: 3px solid #85cf68;
+}
+
+.desabled-seat {
+    background-color: #7c7d80;
+    color: #7c7d80;
+    cursor: default;
+}
+
+
+.seat-selected {
+	color: #fff;
+	outline: 2px solid #08a9f8;
+	outline-offset: 3px;
+	-moz-outline-radius: 100%;
+	scale: 1.2;
+}
+
+.seat-selected:not(.desabled-seat):hover {
+	outline: 6px solid #68a9f8;
+	outline-offset: -1px;
+}
+
+.seat-selected:is(.vip-seat) {
+	outline: 2px solid #85cf68;
+}
+
+.seat-selected:is(.vip-seat):hover {
+	outline: 6px solid #85cf68;
+}
+
+
+.footer {
+	padding: 30px 0 20px;
+}
+
+.standard,
+.vip {
+	display: flex;
+	align-items: center;
+	margin-right: 25px;
+	font-size: 14px;
+}
+
+.circle {
+	width: 10px;
+	height: 10px;
+	margin-right: 7px;
+	border-radius: 50%;
+}
+
+.standard__circle {
+	background: #68a9f8;
+}
+
+.vip__circle {
+	background: #85cf68;
+}
+
+.square-btn {
+	cursor: pointer;
+	padding: 10px 40px;
+	color: #fff;
+	background: #68a9f8;
+	border: none;
+	border-radius: 5px;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.square-btn:hover {
+	background: #85cf68;
+	letter-spacing: 1px;
+	font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
