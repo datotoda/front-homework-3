@@ -63,6 +63,22 @@ function setCoverImage(image_path) {
     cover_image.appendChild(image)
 }
 
+const navEl = document.createElement('header')
+navEl.innerHTML = `
+<nav>
+    <div id="navbar_logo">
+        <img src="src/images/kaxetinet_logo.png"/>
+        <span>Kaxetinet</span>
+    </div>
+    <div class="search">
+        <form id="search_form">
+            <input type="text" name="q" id="search_input" onsubmit="search" placeholder="Search">
+        </form>
+    </div>
+    </nav>
+`
+const body = document.querySelector('body')
+body.insertBefore(navEl, body.firstChild)   
 
 
 document.getElementById("search_form").addEventListener("submit", (e) => {
